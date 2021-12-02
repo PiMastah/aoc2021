@@ -19,7 +19,6 @@ const result =
         break;
     }
 
-    console.log(pos)
     return pos
    }, {x: 0, y: 0})
 
