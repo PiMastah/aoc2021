@@ -1,8 +1,9 @@
-const fs  = require('fs');
+const fs = require('fs');
+const { EOL } = require('os');
 
 const result = 
   fs.readFileSync('input.txt', 'utf8')
-  .split('\n')
+  .split(EOL)
   .map(x => +x)
   .reduce((counts, curr, i, arr) => { 
     if (i < 3) return counts
