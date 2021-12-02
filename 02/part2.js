@@ -10,16 +10,18 @@ const result =
     switch (dir) {
       case 'forward':
         pos.x += +amount;
+        pos.y += pos.aim * +amount;
         break;
       case 'down':
-        pos.y += +amount;
+        pos.aim += +amount;
         break;
       case 'up':
-        pos.y -= +amount;
+        pos.aim -= +amount;
         break;
     }
 
+
     return pos
-   }, {x: 0, y: 0})
+   }, {x: 0, y: 0, aim: 0})
 
  console.log(result.x * result.y)
