@@ -6,12 +6,12 @@ const bits =
   .split(EOL)
   .map(l => l.split('').map(x => +x))
 
-const mostCommonBitInPosition = (transposedBits, position, roundUp = true) => {
-  const sum = transposedBits.map(bits => bits[position]).reduce((sum, x) => sum + x, 0);
+const mostCommonBitInPosition = (bits, position, roundUp = true) => {
+  const sum = bits.map(bits => bits[position]).reduce((sum, x) => sum + x, 0);
 
   return roundUp
-    ? sum >= transposedBits.length / 2 ? 1 : 0
-    : sum >= transposedBits.length / 2 ? 0 : 1
+    ? sum >= bits.length / 2 ? 1 : 0
+    : sum >= bits.length / 2 ? 0 : 1
 }
 
 let candidatesO2 = bits.filter(x => true);
