@@ -14,8 +14,8 @@ const mostCommonBitInPosition = (bits, position, roundUp = true) => {
     : sum >= bits.length / 2 ? 0 : 1
 }
 
-let candidatesO2 = bits.filter(x => true);
-let candidatesCO2 = bits.filter(x => true);
+let candidatesO2 = bits;
+let candidatesCO2 = bits;
 
 let index = 0;
 
