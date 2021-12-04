@@ -24,8 +24,7 @@ const checkBingo = board => {
 }
 
 const checkBingoTurns = numbers => board => {
-  let b = board
-  let i
+  let i, b = board
   for (i=0; i<numbers.length; i++) {
     const n = numbers[i]
     b = b.map(row => row.map(x => x == n ? -1 : x))
@@ -34,9 +33,7 @@ const checkBingoTurns = numbers => board => {
   return [i + 1, b]
 }
 
-const fn = checkBingoTurns(numbers)
-
-const result = boards.map(b => fn(b))
+const result = boards.map(checkBingoTurns(numbers))
 
 const maxTurns = Math.max(...result.map(x => x[0]))
 const maxBoard = result.find(e => e[0] === maxTurns)
