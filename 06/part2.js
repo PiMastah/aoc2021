@@ -1,5 +1,4 @@
 const fs = require('fs')
-const { EOL } = require('os')
 
 const input = 
   fs.readFileSync('input.txt', 'utf8')
