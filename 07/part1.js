@@ -6,8 +6,8 @@ const input =
   .map(x => +x)
   .sort((a, b) => a-b)
 
-let lowMiddle = Math.floor((input.length - 1) / 2);
-let highMiddle = Math.ceil((input.length - 1) / 2);
+const lowMiddle = Math.floor((input.length - 1) / 2);
+const highMiddle = Math.ceil((input.length - 1) / 2);
 
 const median = (input[lowMiddle] + input[highMiddle]) / 2;
 
